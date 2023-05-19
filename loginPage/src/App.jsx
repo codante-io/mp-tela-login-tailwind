@@ -2,7 +2,9 @@ import Login from './pages/Login';
 
 function App() {
   return (
-    <Login />
+    <section className="flex justify-center h-screen bg-slate-900">
+      <Login />
+    </section>
   );
 }
 
