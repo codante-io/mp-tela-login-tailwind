@@ -1,6 +1,7 @@
 module.exports = {
   env: { browser: true, es2020: true },
   extends: [
+    '@trybe/eslint-config-frontend',
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
@@ -12,4 +13,4 @@ module.exports = {
   rules: {
     'react-refresh/only-export-components': 'warn',
   },
-}
+};
