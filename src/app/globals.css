@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.titleCircle {
+    background: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%),
+        linear-gradient(0deg, #D9D9D9, #D9D9D9);
+}
+
+:focus.border-gradiant {
+    --tw-border-opacity: 1;
+    border-color: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
