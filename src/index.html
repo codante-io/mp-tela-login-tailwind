@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/output.css">
+    <title>Login Tailwindcss</title>
+</head>
+<body class="bg-slate-950">
+    <header class="flex justify-center">
+        <h1 class="text-amber-50">
+            Faça seu login
+        </h1>
+    </header>
+
+    <main>
+        <section class="flex justify-center">
+            <div class="flex flex-col items-center  bg-gray-900">
+                <form class="">
+                    <label class="text-amber-50" for="input-email">Email</label>
+                    <input id="input-email" maxlength="40" placeholder="Digite seu email" type="email">
+                    
+                    <label class="text-amber-50" for="input-senha">Senha</label>
+                    <input id="input-senha" maxlength="20" placeholder="Digite sua senha" type="password">
+                </form>
+
+                <p><a class="text-amber-50" href="">Esqueci minha senha</a></p>
+
+                <button class="text-amber-50" type="button">
+                    Entrar
+                </button>
+                
+                <p><a class="text-amber-50" href="">Ainda não tenho conta</a></p>
+
+            </div>
+
+        </section>
+    </main>
+</body>
+</html>
