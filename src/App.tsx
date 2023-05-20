@@ -1,6 +1,10 @@
-import { Login } from './pages/Login'
-import './styles/global.css'
+import { BrowserRouter } from 'react-router-dom'
+import { Router } from './Router'
 
 export function App() {
-  return <Login />
+  return (
+    <BrowserRouter>
+      <Router />
+    </BrowserRouter>
+  )
 }

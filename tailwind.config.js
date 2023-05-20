@@ -4,6 +4,7 @@ export default {
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/layouts/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
@@ -20,6 +21,10 @@ export default {
           'linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%)',
         'eclipse-10':
           'linear-gradient(10deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%)',
+        'eclipse-blue':
+          'linear-gradient(85.11deg, #855BDE -73.67%, #1E3A8A 135.68%)',
+        'eclipse-text':
+          'linear-gradient(120.76deg, #C850C0 13.18%, #FFCC70 101.49%)',
       },
       boxShadow: {
         form: '0px 4px 4px rgba(0, 0, 0, 0.25)',
