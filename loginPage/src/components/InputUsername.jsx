@@ -1,4 +1,4 @@
-function Input() {
+function InputUsername() {
   return (
     <label className="flex flex-col">
       Email
@@ -7,4 +7,4 @@ function Input() {
   );
 }
 
-export default Input;
+export default InputUsername;
