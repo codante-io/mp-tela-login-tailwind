@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="border.css" />
+    <title>Login-Codante</title>
+  </head>
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+  <body>
+    <div
+      class="flex items-center justify-center min-h-screen bg-gradient-to-r from-neutral-950 via-neutral-950 to-neutral-900"
+    >
+      <div
+        class="relative flex flex-col m-6 space-y-8 shadow-2xl rounded-2xl md:flex-row md:space-y-0"
+      >
+        <form action="../Login/greetings/index.html" id="form">
+          <div class="flex flex-col justify-center p-8 md:p-14 bg-zinc-950">
+            <div class="flex items-baseline">
+              <span class="flex mb-16 text-4xl text-white font-bold"
+                >Faça seu login</span
+              >
+              <span
+                class="ml-1 w-3 h-3 bg-gradient-to-tr from-indigo-600 via-fuchsia-600 to-orange-300 rounded-full"
+              ></span>
+            </div>
+
+            <span class="text-gray-400 text-sm mb-2 mt-2">Email</span>
+
+            <div class="group relative mb-2">
+              <div
+                class="absolute -inset-1 bg-gradient-to-tr from-indigo-600 via-fuchsia-600 to-orange-300 opacity-0 blur-md transition duration-500 group-focus-within:opacity-100"
+              ></div>
+              <input
+                type="text"
+                class="text-white relative w-full p-2 placeholder:font-light placeholder:text-white bg-slate-950 focus:outline-none hover:border hover:border-gradient rounded-xl"
+                name="email"
+                id="email"
+              />
+            </div>
+            <span class="text-gray-400 text-sm mb-2 mt-2">Senha</span>
+            <div class="group relative mb-2">
+              <div
+                class="py-4 absolute -inset-1 bg-gradient-to-r from-indigo-600 via-fuchsia-600 to-orange-300 opacity-0 blur-md transition duration-500 group-focus-within:opacity-100"
+              ></div>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                class="text-white relative w-full p-2 placeholder:font-light placeholder:text-white bg-slate-950 focus:outline-none hover:border hover:border-gradient rounded-xl"
+              />
+            </div>
+
+            <div class="text-right w-full py-4">
+              <span class="text-sm text-gray-400 hover:underline"
+                >Esqueci minha senha</span
+              >
+            </div>
+            <button
+              class="w-full font-bold bg-gradient-to-tr from-indigo-600 via-fuchsia-600 to-orange-300 text-white p-2 rounded-xl hover:bg-white transform hover:scale-105 duration-500 ease-in-out"
+              type="submit"
+            >
+              Entrar
+            </button>
+            <div
+              class="control-wrapper text-center"
+              id="errors-container_custom-container"
+            ></div>
+            <div class="text-sm text-center text-gray-400 hover:underline">
+              <span>Ainda não tenho uma conta</span>
+            </div>
+          </div>
+        </form>
+        <div class="relative">
+          <img
+            src="./login.svg"
+            alt="login-img"
+            class="w-[400px] h-full hidden rounded-r-xl md:block object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="validation.js"></script>
+</html>
