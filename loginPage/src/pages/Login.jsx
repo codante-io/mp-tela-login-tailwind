@@ -1,12 +1,13 @@
 import InputPassword from '../components/InputPassword';
 import InputUsername from '../components/InputUsername';
+import LoginButton from '../components/LoginButton';
 
 function Login() {
   return (
     <section className="flex w-5/6 h-5/6 bg-black m-auto rounded-2xl">
       <div
         className="flex flex-col flex-wrap w-2/5 text-white
-        justify-around content-center"
+        justify-evenly content-center h-5/6 self-center"
       >
         <h1 className="text-6xl font-semibold">
           Faça seu login
@@ -14,8 +15,15 @@ function Login() {
             .
           </span>
         </h1>
-        <InputUsername />
-        <InputPassword />
+        <div>
+          <InputUsername />
+          <InputPassword />
+          <span>Esquci minha senha</span>
+        </div>
+        <div className="flex flex-col">
+          <LoginButton />
+          <span>Ainda não tenho uma conta</span>
+        </div>
       </div>
     </section>
   );
