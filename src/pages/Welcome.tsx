@@ -4,32 +4,32 @@ import UserIcon from '../assets/user.svg'
 
 export function Welcome() {
   return (
-    <div className="flex h-full flex-col items-center justify-between p-14">
+    <div className="flex h-full flex-col items-center justify-between p-14 md:p-10">
       <div className="flex w-full items-center justify-between">
         <img src={Logo} alt="" className="h-[80px] w-[80px]" />
         <Link
           to="/"
-          className="rounded-lg bg-eclipse-10 px-6 py-1 text-lg font-bold text-white hover:opacity-90"
+          className="rounded-lg bg-eclipse-10 px-6 py-1 text-lg font-bold text-white hover:opacity-90 sm:text-sm"
         >
           Sair
         </Link>
       </div>
 
-      <div className="flex flex-1 flex-col items-center justify-center gap-9 text-white">
-        <h1 className="text-4xl font-bold ">
+      <div className="flex flex-1 flex-col items-center justify-center gap-9 text-white md:mt-10">
+        <h1 className="text-4xl font-bold sm:text-center sm:text-2xl">
           Evolua na programação{' '}
           <span className="bg-eclipse-text bg-clip-text text-transparent">
             front-end
           </span>
         </h1>
-        <p className="max-w-4xl text-center text-2xl">
+        <p className="max-w-4xl text-center text-2xl sm:text-base">
           Fuja dos mesmos cursos e tutoriais de sempre e aprimore suas skills em
           programação com <strong>workshops</strong> e{' '}
           <strong>mini projetos</strong> ensinados pelos melhores profissionais
           do mercado!
         </p>
 
-        <div className="flex items-center gap-16">
+        <div className="flex items-center gap-16 sm:flex-col sm:gap-4">
           <Link
             to="https://codante.io/"
             target="_blank"
@@ -50,7 +50,7 @@ export function Welcome() {
         </div>
       </div>
 
-      <span>© 2023 Codante.io</span>
+      <span className="sm:text-sm md:mt-10">© 2023 Codante.io</span>
     </div>
   )
 }
