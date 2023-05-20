@@ -1,11 +1,6 @@
-function App() {
-  return (
-    <div>
-      <h1>
-        Olá
-      </h1>
-    </div>
-  )
-}
+import { Login } from './pages/Login'
+import './styles/global.css'
 
-export default App
+export function App() {
+  return <Login />
+}
