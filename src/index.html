@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,35 +8,50 @@
     <link rel="stylesheet" href="../dist/output.css">
     <title>Login Tailwindcss</title>
 </head>
-<body class="bg-slate-950">
-    <header class="flex justify-center">
-        <h1 class="text-amber-50">
-            Faça seu login
-        </h1>
-    </header>
+
+<body class="bg-slate-900 font-sans text-white">
 
     <main>
-        <section class="flex justify-center">
-            <div class="flex flex-col items-center  bg-gray-900">
-                <form class="">
-                    <label class="text-amber-50" for="input-email">Email</label>
-                    <input id="input-email" maxlength="40" placeholder="Digite seu email" type="email">
-                    
-                    <label class="text-amber-50" for="input-senha">Senha</label>
-                    <input id="input-senha" maxlength="20" placeholder="Digite sua senha" type="password">
+        <section  class="flex justify-center items-center h-screen">
+
+            <div class="flex flex-col h-1/2 w-1/2 shadow-xl shadow-green-950 rounded-lg  bg-slate-950">
+                <div class="flex justify-start p-6 ">
+                    <h1 class="text-3xl ">Faça seu login <span class="text-green-950">.</span></h1>
+                </div>
+                <form class="flex flex-col justify-evenly h-3/5 p-6">
+
+                    <div class="flex flex-col justify-evenly h-20">
+                        <label for="input-email">Email</label>
+                        <input class=" bg-slate-900 shadow-lg shadow-green-950	 focus:outline-none p-1 rounded-lg w-64" id="input-email" maxlength="40" type="email">
+                    </div>
+
+                    <div class="flex flex-col justify-evenly h-20">
+                        <label for="input-senha">Senha</label>
+                        <input class=" bg-slate-900 shadow-lg shadow-green-950	 focus:outline-none p-1 rounded-lg w-64" id="input-senha" maxlength="20" type="password">
+                    </div>
+
+                    <div class="flex justify-center w-64">
+                        <a class="text-xs italic underline mt-2.5" href="">Esqueci minha senha</a>
+                    </div>
+
                 </form>
 
-                <p><a class="text-amber-50" href="">Esqueci minha senha</a></p>
+                <div class="p-6">
+                    <div class="flex flex-col items-center justify-between w-64 h-28">
+                        <button class="ease-in duration-300 hover:bg-green-800 rounded-lg  border-white bg-green-950 w-64 p-1	" type="button">
+                            Entrar
+                        </button>
+                        <a class="text-xs italic underline" href="">Ainda não tenho conta</a>
+                    </div>
 
-                <button class="text-amber-50" type="button">
-                    Entrar
-                </button>
-                
-                <p><a class="text-amber-50" href="">Ainda não tenho conta</a></p>
+
+                </div>
 
             </div>
 
         </section>
     </main>
+
 </body>
+
 </html>
