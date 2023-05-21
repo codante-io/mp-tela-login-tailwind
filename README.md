@@ -1,34 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# [💻 A tela de login mais bonita do mundo com Tailwind CSS](https://codante.io/mini-projetos/mp-tela-login-tailwind)
 
-## Getting Started
+Você foi contratado por uma empresa de desenvolvimento de software para criar a tela de login mais bonita do mundo usando o framework Tailwind CSS. A empresa deseja proporcionar uma experiência visualmente agradável aos usuários ao fazerem login em seus sistemas.
 
-First, run the development server:
+## 🔨 Requisitos
+- Crie uma tela de login responsiva, que se adapte a diferentes tamanhos de tela.
+- Utilize o framework Tailwind CSS para estilizar os elementos da tela de login.
+- A tela de login deve conter os seguintes elementos:
+  - Campo de entrada para o nome de usuário.
+  - Campo de entrada para a senha.
+  - Botão "Entrar" para fazer o login.
+- Implemente a validação dos campos de entrada. Caso algum campo esteja vazio, exiba uma mensagem de erro.
+- Após o usuário fazer o login com sucesso, redirecione-o para uma página de boas-vindas.
+- Capriche no design! Use sua criatividade para criar uma interface atraente e amigável, aproveitando os recursos oferecidos pelo Tailwind CSS.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## 🔍 Dicas
+- Considere adicionar transições e animações suaves para tornar a experiência do usuário mais agradável.
+- Teste seu design em diferentes dispositivos e navegadores para garantir que ele seja responsivo e funcional em todos eles.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Design sugerido
+🔗 [Acesse o link do Figma](https://www.figma.com/file/suvmja6210ggZOO6Cpehjl/Mini-Projeto---A-tela-de-login-mais-bonita-do-mundo?type=design&node-id=0%3A1&t=pnT8xEiypSKTO4Z7-1)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+![image](https://github.com/codante-io/mp-tela-login-tailwind/assets/6475893/914bc33a-ed2a-4720-bf3a-f2c2d9eb41a8)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## 📝 Mockups
+![Screenshot_2023-05-06_134731-removebg-preview](https://user-images.githubusercontent.com/6475893/236636789-b03715d5-7010-4e46-af97-b4a901d0fe63.png)
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 💡 Inspiração
+- https://dribbble.com/shots/5792716-Login-page
+- https://dribbble.com/shots/3546598-Sign-In
+- https://www.youtube.com/watch?v=t-EMinSz_Tk
