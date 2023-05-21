@@ -17,4 +17,48 @@ body {
 
     transition-duration: 600ms;
   }
+
+  .background {
+    background-image: url(https://i.ibb.co/J7QCBsY/bg.png);
+    background-size:  auto 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
+  .btn-animation {
+    translate: 0 -0.3rem;
+
+    transition: .8s;
+  }
+
+  @keyframes animation-border {
+    0% {
+      /* border-color: #4158D0; */
+      box-shadow: 0 0 10px 3px #4158D050;
+    }
+    25% {
+      /* border-color: #C850C0; */
+      box-shadow: 0 0 5px 1px #C850C050;
+    }
+    50% {
+      /* border-color: #FFCC70; */
+      box-shadow: 0 0 10px 3px #FFCC7050;
+    }
+    75% {
+      /* border-color: #D9D9D9; */
+      box-shadow: 0 0 5px 1px #D9D9D950;
+    }
+    100% {
+      /* border-color: #4158D0; */
+      box-shadow: 0 0 10px 3px #4158D050;
+    }
+  }
+  
+  .border-animation {
+    animation-name: animation-border;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+  }
 }
