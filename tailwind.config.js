@@ -8,8 +8,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        'p-b1-styles': '#0E0D10',
-        'primary-b2': '#121216',
+        'login-bg': '#070709',
+        'input': '#111112'
       },
       gradientColorStops: {
         'custom-gradient': [
@@ -17,6 +17,11 @@ export default {
           '#0E0D10 53.01%',
           '#121216 75.95%',
         ],
+        'custom-point-gradient': [
+          '#4158D0 0%',
+          '#C850C0 46%',
+          '#FFCC70 100%',
+        ]
       },
     },
   },
