@@ -16,7 +16,7 @@ const Input = forwardRef<HTMLInputElement, T.IInputProps>(
       isErrored ? "text-red-500" : "text-white"
     } w-[80%] flex-1 items-center border-none outline-none bg-transparent text-[10pt] placeholder:text-[#9CA3AF] no-spin`;
 
-    const passwordEyeClass = "text-[18pt] text-white cursor-pointer";
+    const passwordEyeClass = "text-[14pt] text-white cursor-pointer";
 
     useEffect(() => {
       type === "password" ? setIsPassword(true) : setIsPassword(false);
@@ -50,7 +50,7 @@ const Input = forwardRef<HTMLInputElement, T.IInputProps>(
             <Icon
               className={`${
                 isErrored ? "text-red-500" : "text-white"
-              } text-[18pt] mr-2`}
+              } text-[14pt] mr-2`}
             />
           )}
 
