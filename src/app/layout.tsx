@@ -1,7 +1,10 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const dm = DM_Sans({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 export const metadata = {
   title: "Tela de login",
@@ -15,7 +18,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${dm.className} flex justify-center items-center h-screen w-screen`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
