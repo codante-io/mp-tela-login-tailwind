@@ -1,5 +1,5 @@
 export interface IWelcomePageProps {
   params: {
-    userId: string;
+    userName: string;
   };
 }

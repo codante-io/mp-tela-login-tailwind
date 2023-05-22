@@ -7,6 +7,8 @@ import {
 import { ReactNode } from "react";
 
 export interface IUserContext {
+  loggedUser?: IUser;
+  logout: () => void;
   login: (data: IUserLoginRequest) => void;
   register: (data: IUserCreateRequest) => void;
   recover: (data: IUserRecoverRequest) => void;

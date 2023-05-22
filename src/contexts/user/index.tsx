@@ -19,6 +19,7 @@ export const useUserContext = () => {
 
 export default function UserProvider({ children }: T.IUserProvider) {
   const [database, setDatabase] = useState<IUser[]>([]);
+  const [loggedUser, setLoggedUser] = useState<IUser | undefined>(undefined);
   const router = useRouter();
 
   const login = (data: IUserLoginRequest) => {
@@ -36,17 +37,31 @@ export default function UserProvider({ children }: T.IUserProvider) {
       }
 
       toast.success("Usuário logado com sucesso!");
+      setLoggedUser(userExists);
 
       setTimeout(() => {
         toast.success("Você será redirecionado para a tela de boas vindas.");
       }, 2000);
 
       setTimeout(() => {
-        router.push(`/welcome/${userExists.name + "$" + userExists.id}`);
+        router.push(`/welcome/${userExists.name}`);
       }, 3500);
     } catch (error: any) {
       toast.error(error.message);
     }
+  };
+
+  const logout = () => {
+    setLoggedUser(undefined);
+    toast("Aguarde...");
+
+    setTimeout(() => {
+      toast("Você está sendo deslogado");
+    }, 2000);
+
+    setTimeout(() => {
+      router.push("/");
+    }, 3000);
   };
 
   const register = (data: IUserCreateRequest) => {
@@ -119,7 +134,9 @@ export default function UserProvider({ children }: T.IUserProvider) {
   };
 
   return (
-    <userContext.Provider value={{ login, register, recover }}>
+    <userContext.Provider
+      value={{ login, logout, register, recover, loggedUser }}
+    >
       {children}
     </userContext.Provider>
   );
