@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  background: #0E0D10;
+}
+
+.dot::after {
+  content: '';
+  height: 10px;
+  width: 10px;
+  background: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%), #D9D9D9;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 5px;
+}
