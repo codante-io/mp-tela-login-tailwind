@@ -17,7 +17,7 @@ function LoginButton() {
     <button
       type="submit"
       className="bg-gradient-to-r from-violet-500 via-pink-500 to-rose-200
-      h-11 rounded-xl text-lg"
+      h-11 rounded-xl text-lg font-bold hover:h-14"
       onClick={ handleClick }
     >
       Entrar

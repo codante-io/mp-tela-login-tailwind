@@ -12,7 +12,8 @@ function InputUsername() {
       Email
       <input
         type="text"
-        className="rounded-2xl h-16 text-neutral-950"
+        className="rounded-2xl h-16 text-neutral-950 bg-zinc-900
+        hover:border-4 border-pink-500"
         onChange={ (e) => handlechange(e.target) }
       />
     </label>

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import InputPassword from '../components/InputPassword';
 import InputUsername from '../components/InputUsername';
@@ -19,14 +20,18 @@ function Login() {
             .
           </span>
         </h1>
-        <div>
+        <div className="flex flex-col justify-between">
           <InputUsername />
           <InputPassword />
-          <span>Esqueci minha senha</span>
+          <Link to="*" className="self-end hover:font-bold">
+            <span>Esqueci minha senha</span>
+          </Link>
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col text-center">
           <LoginButton />
-          <span>Ainda não tenho uma conta</span>
+          <Link to="*" className="hover:font-bold">
+            <span>Ainda não tenho uma conta</span>
+          </Link>
           { isNull && <span>O campo Email deve ser preenchido</span>}
         </div>
       </div>

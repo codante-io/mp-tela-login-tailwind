@@ -8,7 +8,7 @@ function App() {
   return (
     <LoginProvider>
       <Router>
-        <section className="flex justify-center h-screen bg-slate-900">
+        <section className="flex justify-center h-screen bg-zinc-900">
           <Routes>
             <Route path="/" element={ <Login /> } />
             <Route path="/home" element={ <Home /> } />
