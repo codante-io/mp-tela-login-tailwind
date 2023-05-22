@@ -7,8 +7,11 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { userLoginSchema } from "@/schemas/user";
 import { IUserLoginRequest } from "@/types/user";
+import { useRouter } from "next/navigation";
 
 export default function LoginForm() {
+  const router = useRouter();
+
   const {
     handleSubmit,
     register,
@@ -19,7 +22,7 @@ export default function LoginForm() {
   });
 
   const handleLogin = (data: IUserLoginRequest) => {
-    console.log(data);
+    router.push("/welcome");
     reset();
   };
 
