@@ -11,7 +11,7 @@ import { useRouter } from "next/navigation";
 import { database } from "@/database";
 import { toast, ToastContainer } from "react-toast";
 
-export default function RegisterForm() {
+export default function RecoverForm() {
   const router = useRouter();
 
   const {
@@ -60,17 +60,17 @@ export default function RegisterForm() {
       >
         <C.Input
           icon={FiUser}
-          label="Nome"
+          label="E-mail"
           type="text"
-          placeholder="Digite o seu nome"
+          placeholder="Digite o seu e-mail"
           {...register("email")}
           error={errors.email?.message}
         />
         <C.Input
           icon={FiLock}
-          label="Senha"
+          label="Nova Senha"
           type="password"
-          placeholder="Digite sua senha"
+          placeholder="Digite sua nova senha"
           {...register("newPassword")}
           error={errors.newPassword?.message}
         />
@@ -78,12 +78,16 @@ export default function RegisterForm() {
           icon={FiLock}
           label="Confirmação"
           type="password"
-          placeholder="Confirme sua senha"
+          placeholder="Confirme sua nova senha"
           {...register("confirmNewPassword")}
           error={errors.confirmNewPassword?.message}
         />
 
         <C.Button type="submit">Redefinir</C.Button>
+
+        <Link href="/" className="text-[#9CA3AF] text-[8pt] underline">
+          Voltar para login
+        </Link>
       </form>
       <ToastContainer delay={3000} />
     </>

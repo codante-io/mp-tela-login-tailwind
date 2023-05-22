@@ -7,13 +7,10 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { userLoginSchema } from "@/schemas/user";
 import { IUserLoginRequest } from "@/types/user";
-import { useRouter } from "next/navigation";
-import { database } from "@/database";
-import { toast, ToastContainer } from "react-toast";
+import { useUserContext } from "@/contexts/user";
+import { ToastContainer } from "react-toast";
 
 export default function LoginForm() {
-  const router = useRouter();
-
   const {
     handleSubmit,
     register,
@@ -23,37 +20,12 @@ export default function LoginForm() {
     resolver: zodResolver(userLoginSchema),
   });
 
+  const { login } = useUserContext();
+
   const handleLogin = (data: IUserLoginRequest) => {
-    try {
-      const userExists = database.find((user) => user.email === data.email);
-
-      if (!userExists) {
-        throw new Error("Usuário ou senha errados!");
-      }
-
-      const passwordsMatch = userExists.password === data.password;
-
-      if (!passwordsMatch) {
-        throw new Error("Usuário ou senha errados!");
-      }
-
-      toast.success("Usuário logado com sucesso!");
-
-      setTimeout(() => {
-        toast.success("Você será redirecionado para a tela de boas vindas.");
-      }, 2000);
-
-      setTimeout(() => {
-        router.push("/welcome");
-      }, 3500);
-
-      reset();
-    } catch (error: any) {
-      toast.error(error.message);
-    }
+    login(data);
+    reset();
   };
-
-  console.log(database);
 
   return (
     <>
@@ -91,7 +63,7 @@ export default function LoginForm() {
           Ainda não tenho uma conta
         </Link>
       </form>
-      <ToastContainer delay={3000} />
+      <ToastContainer />
     </>
   );
 }

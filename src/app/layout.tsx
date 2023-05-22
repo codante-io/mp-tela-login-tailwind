@@ -1,3 +1,4 @@
+import Contexts from "@/contexts";
 import "./globals.css";
 import { DM_Sans } from "next/font/google";
 
@@ -21,7 +22,7 @@ export default function RootLayout({
       <body
         className={`${dm.className} flex justify-center items-center h-screen w-screen`}
       >
-        {children}
+        <Contexts>{children}</Contexts>
       </body>
     </html>
   );
