@@ -5,12 +5,11 @@ import * as C from "@/components";
 import { FiUser, FiLock } from "react-icons/fi";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { userCreateSchema } from "@/schemas/user";
-import { IUser, IUserCreateRequest } from "@/types/user";
+import { userRecoverSchema } from "@/schemas/user";
+import { IUser, IUserRecoverRequest } from "@/types/user";
 import { useRouter } from "next/navigation";
 import { database } from "@/database";
 import { toast, ToastContainer } from "react-toast";
-import { v4 as uuid } from "uuid";
 
 export default function RegisterForm() {
   const router = useRouter();
@@ -20,25 +19,24 @@ export default function RegisterForm() {
     register,
     formState: { errors },
     reset,
-  } = useForm<IUserCreateRequest>({
-    resolver: zodResolver(userCreateSchema),
+  } = useForm<IUserRecoverRequest>({
+    resolver: zodResolver(userRecoverSchema),
   });
 
-  const handleRegister = (data: IUserCreateRequest) => {
+  const handleRegister = (data: IUserRecoverRequest) => {
     try {
-      const userAlreadyExists = database.find(
-        (user) => user.email === data.email
-      );
+      const userExists = database.find((user) => user.email === data.email);
 
-      if (userAlreadyExists) {
-        throw new Error("Usuário já existe");
+      if (!userExists) {
+        throw new Error("Usuário não encontrado");
       }
 
-      delete data.confirmPassword;
+      database.map(
+        (user) =>
+          user.email === data.email && (user.password = data.newPassword)
+      );
 
-      database.push({ ...data, id: uuid() });
-
-      toast.success("Usuário criado com sucesso!");
+      toast.success("Usuário atualizado com sucesso!");
 
       setTimeout(() => {
         toast.success("Você será redirecionado para a tela de login");
@@ -51,16 +49,6 @@ export default function RegisterForm() {
       reset();
     } catch (error: any) {
       toast.error(error.message);
-
-      setTimeout(() => {
-        toast.error("Você será redirecionado para a tela de login");
-      }, 2000);
-
-      setTimeout(() => {
-        router.push("/");
-      }, 3500);
-
-      reset();
     }
   };
 
@@ -75,14 +63,6 @@ export default function RegisterForm() {
           label="Nome"
           type="text"
           placeholder="Digite o seu nome"
-          {...register("name")}
-          error={errors.name?.message}
-        />
-        <C.Input
-          icon={FiUser}
-          label="E-mail"
-          type="text"
-          placeholder="Digite o seu e-mail"
           {...register("email")}
           error={errors.email?.message}
         />
@@ -91,23 +71,19 @@ export default function RegisterForm() {
           label="Senha"
           type="password"
           placeholder="Digite sua senha"
-          {...register("password")}
-          error={errors.password?.message}
+          {...register("newPassword")}
+          error={errors.newPassword?.message}
         />
         <C.Input
           icon={FiLock}
           label="Confirmação"
           type="password"
           placeholder="Confirme sua senha"
-          {...register("confirmPassword")}
-          error={errors.confirmPassword?.message}
+          {...register("confirmNewPassword")}
+          error={errors.confirmNewPassword?.message}
         />
 
-        <C.Button type="submit">Cadastrar</C.Button>
-
-        <Link href="/" className="text-[#9CA3AF] text-[8pt] underline">
-          Já possuo uma conta
-        </Link>
+        <C.Button type="submit">Redefinir</C.Button>
       </form>
       <ToastContainer delay={3000} />
     </>
