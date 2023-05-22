@@ -1,10 +1,19 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './pages/Login';
+import Home from './pages/Home';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
-    <section className="flex justify-center h-screen bg-slate-900">
-      <Login />
-    </section>
+    <Router>
+      <section className="flex justify-center h-screen bg-slate-900">
+        <Routes>
+          <Route path="/" element={ <Login /> } />
+          <Route path="/home" element={ <Home /> } />
+          <Route path="*" element={ <NotFound /> } />
+        </Routes>
+      </section>
+    </Router>
   );
 }
 
