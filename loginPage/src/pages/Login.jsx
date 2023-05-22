@@ -18,7 +18,7 @@ function Login() {
         <div>
           <InputUsername />
           <InputPassword />
-          <span>Esquci minha senha</span>
+          <span>Esqueci minha senha</span>
         </div>
         <div className="flex flex-col">
           <LoginButton />
