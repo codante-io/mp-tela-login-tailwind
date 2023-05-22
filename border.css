@@ -1,0 +1,12 @@
+.hover\:border-gradient:hover {
+    border-image: linear-gradient(to top left, #3B82F6, #8B5CF6, #c47a0c) 1;
+    background: linear-gradient(to right, #18181B, #18181B),
+        linear-gradient(to top left, #3B82F6, #8B5CF6, #c47a0c);
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+}
+
+.error {
+    color: rgb(255, 255, 255);
+    background-color: #acf;
+}
