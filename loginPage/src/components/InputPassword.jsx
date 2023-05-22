@@ -11,7 +11,7 @@ function InputPassword() {
       Password
       <input
         type="password"
-        className="max-sm:h-11 rounded-2xl h-16 text-neutral-950 bg-zinc-900
+        className="max-sm:h-11 rounded-2xl h-16 bg-zinc-900
         hover:border-4 border-pink-500"
         onChange={ (e) => handlechange(e.target) }
       />
