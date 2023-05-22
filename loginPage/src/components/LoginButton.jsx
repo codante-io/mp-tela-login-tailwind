@@ -1,6 +1,14 @@
+import { useNavigate } from 'react-router-dom';
+
 function LoginButton() {
+  const navigate = useNavigate();
   return (
-    <button type="submit">Entrar</button>
+    <button
+      type="submit"
+      onClick={ () => navigate('home') }
+    >
+      Entrar
+    </button>
   );
 }
 
