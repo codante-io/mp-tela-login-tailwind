@@ -9,10 +9,13 @@ function Login() {
   const { isNull } = useContext(LoginContext);
 
   return (
-    <section className="flex w-5/6 h-5/6 bg-black m-auto rounded-2xl">
+    <section
+      className=" flex justify-between w-5/6 h-5/6
+      bg-black m-auto rounded-2xl max-sm:w-full"
+    >
       <div
         className="flex flex-col flex-wrap w-2/5 text-white
-        justify-evenly content-center h-5/6 self-center"
+        justify-evenly content-center h-5/6 self-center max-sm:w-5/6 m-auto"
       >
         <h1 className="text-6xl font-semibold">
           Faça seu login
@@ -34,6 +37,13 @@ function Login() {
           </Link>
           { isNull && <span>O campo Email deve ser preenchido</span>}
         </div>
+      </div>
+      <div className="max-sm:hidden bg-zinc-50 w-6/12 opacity-40">
+        <img
+          src="https://w.forfun.com/fetch/36/36a26536d26fde21a70ea59dbb05933c.jpeg"
+          alt="desenho montanha flutuante"
+          className="h-full "
+        />
       </div>
     </section>
   );
