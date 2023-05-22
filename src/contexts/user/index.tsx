@@ -1,9 +1,14 @@
 import { createContext, useContext, useState } from "react";
 import * as T from "./types";
-import { IUser, IUserLoginRequest, IUserRecoverRequest } from "@/types/user";
+import {
+  IUser,
+  IUserCreateRequest,
+  IUserLoginRequest,
+  IUserRecoverRequest,
+} from "@/types/user";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toast";
-
+import { v4 as uuid } from "uuid";
 const userContext = createContext<T.IUserContext>({} as T.IUserContext);
 
 export const useUserContext = () => {
@@ -44,7 +49,41 @@ export default function UserProvider({ children }: T.IUserProvider) {
     }
   };
 
-  const register = () => {};
+  const register = (data: IUserCreateRequest) => {
+    try {
+      const userAlreadyExists = database.find(
+        (user) => user.email === data.email
+      );
+
+      if (userAlreadyExists) {
+        throw new Error("Usuário já existe");
+      }
+
+      delete data.confirmPassword;
+
+      setDatabase([...database, { ...data, id: uuid() }]);
+
+      toast.success("Usuário criado com sucesso!");
+
+      setTimeout(() => {
+        toast.success("Você será redirecionado para a tela de login");
+      }, 2000);
+
+      setTimeout(() => {
+        router.push("/");
+      }, 3500);
+    } catch (error: any) {
+      toast.error(error.message);
+
+      setTimeout(() => {
+        toast.error("Você será redirecionado para a tela de login");
+      }, 2000);
+
+      setTimeout(() => {
+        router.push("/");
+      }, 3500);
+    }
+  };
 
   const recover = (data: IUserRecoverRequest) => {
     try {

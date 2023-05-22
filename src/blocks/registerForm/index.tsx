@@ -11,9 +11,10 @@ import { useRouter } from "next/navigation";
 import { database } from "@/database";
 import { toast, ToastContainer } from "react-toast";
 import { v4 as uuid } from "uuid";
+import { useUserContext } from "@/contexts/user";
 
 export default function RegisterForm() {
-  const router = useRouter();
+  const { register: handleUserRegister } = useUserContext();
 
   const {
     handleSubmit,
@@ -25,43 +26,8 @@ export default function RegisterForm() {
   });
 
   const handleRegister = (data: IUserCreateRequest) => {
-    try {
-      const userAlreadyExists = database.find(
-        (user) => user.email === data.email
-      );
-
-      if (userAlreadyExists) {
-        throw new Error("Usuário já existe");
-      }
-
-      delete data.confirmPassword;
-
-      database.push({ ...data, id: uuid() });
-
-      toast.success("Usuário criado com sucesso!");
-
-      setTimeout(() => {
-        toast.success("Você será redirecionado para a tela de login");
-      }, 2000);
-
-      setTimeout(() => {
-        router.push("/");
-      }, 3500);
-
-      reset();
-    } catch (error: any) {
-      toast.error(error.message);
-
-      setTimeout(() => {
-        toast.error("Você será redirecionado para a tela de login");
-      }, 2000);
-
-      setTimeout(() => {
-        router.push("/");
-      }, 3500);
-
-      reset();
-    }
+    handleUserRegister(data);
+    reset();
   };
 
   return (
