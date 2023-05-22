@@ -32,9 +32,15 @@ export default function WelcomePage({
         <p className="text-center text-white text-[14pt] mb-4 max-sm:text-[11pt]">
           Ainda há muito o que aprender mas o seu feedback é muito importante
           para mim por isso quero te pedir que possa visitar o meu{" "}
-          <a href="https://www.linkedin.com/in/th-matheus/">Linkedin</a> e me dê
-          um feedback do que achou desta aplicação e sugestões para este meu
-          aprendizado e caminhada.
+          <a
+            href="https://www.linkedin.com/in/th-matheus/"
+            target="_blank"
+            className="text-yellow-300 hover:btn-animation transition-all inline-block"
+          >
+            Linkedin
+          </a>{" "}
+          e me dê um feedback do que achou desta aplicação e sugestões para este
+          meu aprendizado e caminhada.
         </p>
         <div className="w-[100%] h-[50%] max-sm:hidden flex flex-col items-center justify-center overflow-hidden">
           <img
