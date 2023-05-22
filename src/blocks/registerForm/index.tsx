@@ -43,6 +43,14 @@ export default function RegisterForm() {
       router.push("/");
     } catch (error: any) {
       toast.error(error.message);
+
+      setTimeout(() => {
+        toast.error("Você será redirecionado para a tela de login");
+      }, 2000);
+
+      setTimeout(() => {
+        router.push("/");
+      }, 3500);
     }
   };
 
