@@ -23,7 +23,7 @@ function Login() {
             .
           </span>
         </h1>
-        <div className="flex flex-col justify-between">
+        <div className="flex flex-col justify-between w-5/6">
           <InputUsername />
           <InputPassword />
           <Link to="*" className="self-end hover:font-bold">
@@ -42,7 +42,7 @@ function Login() {
         <img
           src="https://w.forfun.com/fetch/36/36a26536d26fde21a70ea59dbb05933c.jpeg"
           alt="desenho montanha flutuante"
-          className="h-full "
+          className="h-full"
         />
       </div>
     </section>
