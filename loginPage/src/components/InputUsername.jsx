@@ -4,7 +4,6 @@ import LoginContext from '../context/LoginContext';
 function InputUsername() {
   const { setEmail } = useContext(LoginContext);
   const handlechange = (x) => {
-    console.log(x.value);
     setEmail(x.value);
   };
 
@@ -13,7 +12,7 @@ function InputUsername() {
       Email
       <input
         type="text"
-        className="rounded-2xl h-16"
+        className="rounded-2xl h-16 text-neutral-950"
         onChange={ (e) => handlechange(e.target) }
       />
     </label>
