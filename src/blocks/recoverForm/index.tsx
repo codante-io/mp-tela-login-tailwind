@@ -10,9 +10,10 @@ import { IUser, IUserRecoverRequest } from "@/types/user";
 import { useRouter } from "next/navigation";
 import { database } from "@/database";
 import { toast, ToastContainer } from "react-toast";
+import { useUserContext } from "@/contexts/user";
 
 export default function RecoverForm() {
-  const router = useRouter();
+  const { recover } = useUserContext();
 
   const {
     handleSubmit,
@@ -24,32 +25,8 @@ export default function RecoverForm() {
   });
 
   const handleRegister = (data: IUserRecoverRequest) => {
-    try {
-      const userExists = database.find((user) => user.email === data.email);
-
-      if (!userExists) {
-        throw new Error("Usuário não encontrado");
-      }
-
-      database.map(
-        (user) =>
-          user.email === data.email && (user.password = data.newPassword)
-      );
-
-      toast.success("Usuário atualizado com sucesso!");
-
-      setTimeout(() => {
-        toast.success("Você será redirecionado para a tela de login");
-      }, 2000);
-
-      setTimeout(() => {
-        router.push("/");
-      }, 3500);
-
-      reset();
-    } catch (error: any) {
-      toast.error(error.message);
-    }
+    recover(data);
+    reset();
   };
 
   return (

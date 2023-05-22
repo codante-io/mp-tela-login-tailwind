@@ -63,7 +63,7 @@ export default function LoginForm() {
           Ainda não tenho uma conta
         </Link>
       </form>
-      <ToastContainer />
+      <ToastContainer delay={3000} />
     </>
   );
 }
