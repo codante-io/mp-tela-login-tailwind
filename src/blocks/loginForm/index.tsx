@@ -49,7 +49,7 @@ export default function LoginForm() {
       />
 
       <Link
-        href="recover"
+        href="/recover"
         className="self-end text-[#9CA3AF] text-[8pt] underline pr-3"
       >
         Esqueci minha senha
