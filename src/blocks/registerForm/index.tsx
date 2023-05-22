@@ -40,7 +40,16 @@ export default function RegisterForm() {
       database.push(data as IUser);
 
       toast.success("Usuário criado com sucesso!");
-      router.push("/");
+
+      setTimeout(() => {
+        toast.success("Você será redirecionado para a tela de login");
+      }, 2000);
+
+      setTimeout(() => {
+        router.push("/");
+      }, 3500);
+
+      reset();
     } catch (error: any) {
       toast.error(error.message);
 
@@ -51,6 +60,8 @@ export default function RegisterForm() {
       setTimeout(() => {
         router.push("/");
       }, 3500);
+
+      reset();
     }
   };
 
