@@ -38,7 +38,7 @@ function Login() {
           { isNull && <span>O campo Email deve ser preenchido</span>}
         </div>
       </div>
-      <div className="max-sm:hidden bg-zinc-50 w-6/12 opacity-40">
+      <div className="bg-zinc-50 w-6/12 opacity-40 max-sm:hidden">
         <img
           src="https://w.forfun.com/fetch/36/36a26536d26fde21a70ea59dbb05933c.jpeg"
           alt="desenho montanha flutuante"
