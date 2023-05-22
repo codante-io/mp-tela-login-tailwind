@@ -1,8 +1,12 @@
+import { useContext } from 'react';
 import InputPassword from '../components/InputPassword';
 import InputUsername from '../components/InputUsername';
 import LoginButton from '../components/LoginButton';
+import LoginContext from '../context/LoginContext';
 
 function Login() {
+  const { isNull } = useContext(LoginContext);
+
   return (
     <section className="flex w-5/6 h-5/6 bg-black m-auto rounded-2xl">
       <div
@@ -23,6 +27,7 @@ function Login() {
         <div className="flex flex-col">
           <LoginButton />
           <span>Ainda não tenho uma conta</span>
+          { isNull && <span>O campo Email deve ser preenchido</span>}
         </div>
       </div>
     </section>
