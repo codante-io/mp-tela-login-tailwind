@@ -41,11 +41,11 @@ export default function UserProvider({ children }: T.IUserProvider) {
 
       setTimeout(() => {
         toast.success("Você será redirecionado para a tela de boas vindas.");
-      }, 2000);
+      }, 500);
 
       setTimeout(() => {
         router.push(`/welcome/${userExists.name}`);
-      }, 3500);
+      }, 2000);
     } catch (error: any) {
       toast.error(error.message);
     }
@@ -53,15 +53,15 @@ export default function UserProvider({ children }: T.IUserProvider) {
 
   const logout = () => {
     setLoggedUser(undefined);
-    toast("Aguarde...");
+    toast("Você está sendo deslogado");
 
     setTimeout(() => {
-      toast("Você está sendo deslogado");
-    }, 2000);
+      toast("Aguarde...");
+    }, 1000);
 
     setTimeout(() => {
       router.push("/");
-    }, 3000);
+    }, 2000);
   };
 
   const register = (data: IUserCreateRequest) => {
@@ -82,11 +82,11 @@ export default function UserProvider({ children }: T.IUserProvider) {
 
       setTimeout(() => {
         toast.success("Você será redirecionado para a tela de login");
-      }, 2000);
+      }, 500);
 
       setTimeout(() => {
         router.push("/");
-      }, 3500);
+      }, 2000);
     } catch (error: any) {
       toast.error(error.message);
 
@@ -123,11 +123,11 @@ export default function UserProvider({ children }: T.IUserProvider) {
 
       setTimeout(() => {
         toast.success("Você será redirecionado para a tela de login");
-      }, 2000);
+      }, 500);
 
       setTimeout(() => {
         router.push("/");
-      }, 3500);
+      }, 2000);
     } catch (error: any) {
       toast.error(error.message);
     }

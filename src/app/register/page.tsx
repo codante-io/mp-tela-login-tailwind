@@ -2,7 +2,7 @@ import * as B from "@/blocks";
 
 export default function RegisterPage() {
   return (
-    <div className="flex justify-center items-center h-[75%] w-3/5 max-md:w-[85%]  bg-[#070708] rounded-[2rem] overflow-hidden border-animation">
+    <div className="flex justify-center items-center h-[32rem] w-3/5 max-md:w-[85%]  bg-[#070708] rounded-[2rem] overflow-hidden border-animation">
       <div className="w-[45%] max-md:w-full max-lg:w-[55%] h-full flex flex-col items-center justify-center gap-4">
         <h1 className="text-white text-[20pt] font-bold">
           Cadastre-se Já{" "}
