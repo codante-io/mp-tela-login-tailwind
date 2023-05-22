@@ -5,7 +5,7 @@ import * as C from "@/components";
 import { FiUser, FiLock } from "react-icons/fi";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { userLoginSchema } from "@/schemas/user";
+import { userCreateSchema } from "@/schemas/user";
 import { IUserCreateRequest } from "@/types/user";
 import { useRouter } from "next/navigation";
 
@@ -18,7 +18,7 @@ export default function RegisterForm() {
     formState: { errors },
     reset,
   } = useForm<IUserCreateRequest>({
-    resolver: zodResolver(userLoginSchema),
+    resolver: zodResolver(userCreateSchema),
   });
 
   const handleRegister = (data: IUserCreateRequest) => {
