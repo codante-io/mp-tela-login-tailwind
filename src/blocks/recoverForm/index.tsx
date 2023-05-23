@@ -6,10 +6,8 @@ import { FiUser, FiLock } from "react-icons/fi";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { userRecoverSchema } from "@/schemas/user";
-import { IUser, IUserRecoverRequest } from "@/types/user";
-import { useRouter } from "next/navigation";
-import { database } from "@/database";
-import { toast, ToastContainer } from "react-toast";
+import { IUserRecoverRequest } from "@/types/user";
+import { ToastContainer } from "react-toast";
 import { useUserContext } from "@/contexts/user";
 
 export default function RecoverForm() {
@@ -33,7 +31,7 @@ export default function RecoverForm() {
     <>
       <form
         onSubmit={handleSubmit(handleRegister)}
-        className="w-4/5 flex flex-col justify-center items-center gap-4"
+        className="flex flex-col items-center justify-center w-4/5 gap-4"
       >
         <C.Input
           icon={FiUser}
