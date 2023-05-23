@@ -1,0 +1,26 @@
+{
+  "name": "mp-tela-login-tailwind",
+  "version": "1.0.0",
+  "description": "Você foi contratado por uma empresa de desenvolvimento de software para criar a tela de login mais bonita do mundo usando o framework Tailwind CSS. A empresa deseja proporcionar uma experiência visualmente agradável aos usuários ao fazerem login em seus sistemas.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Junior-Piovesan/mp-tela-login-tailwind.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Junior-Piovesan/mp-tela-login-tailwind/issues"
+  },
+  "homepage": "https://github.com/Junior-Piovesan/mp-tela-login-tailwind#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.41.0",
+    "tailwindcss": "^3.3.2"
+  }
+}
