@@ -30,7 +30,7 @@ export default function Home() {
   }
 
   return (
-    <div className="flex flex-row lg:justify-start lg:items-center md:items-center sm:items-start h-full w-full bg-black">
+    <div className="flex flex-row p-20 lg:justify-start lg:items-center md:items-center sm:items-start h-full w-full bg-black">
       <div className="absolute inset-0 z-0">
       {Array.from({ length: 100 }).map((_, index) => (
           <div
@@ -54,7 +54,7 @@ export default function Home() {
       <div style={{ zIndex: 1}} className="lg:w-3/6 bg-transparent h-4/6 sm:w-2/3 flex flex-row flex-wrap justify-center items-center">
         <div className="flex flex-col w-full h-full justify-start items-start m-5">
           <div className="lg:w-10/12 sm:w-full flex flex-row lg:justify-center   sm:justify-start items-center flex-wrap">
-          <h1 className='text-yellow-500 m-0 self-start font-bold text-6xl w-full lg:text-center'>Faça seu login</h1>
+          <h1 className='text-yellow-500 m-0 self-start font-bold text-6xl w-full lg:text-center'>Faça seu login.</h1>
           <span className="text-yellow-500 self-start text-center opacity-70 from-stone-500 italic">E que a força esteja com você.</span>
           </div>
           <div className="flex flex-col w-10/12 sm:w-full">
