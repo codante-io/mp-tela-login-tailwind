@@ -30,7 +30,7 @@ export default function Home() {
   }
 
   return (
-    <div className="flex flex-row p-20 lg:justify-start lg:items-center md:items-center sm:items-start h-full w-full bg-black">
+    <div className="flex flex-row lg:p-20 sm:p-0 md:justify-start lg:justify-start lg:items-center md:items-center sm:items-start h-full w-full bg-black">
       <div className="absolute inset-0 z-0">
       {Array.from({ length: 100 }).map((_, index) => (
           <div
