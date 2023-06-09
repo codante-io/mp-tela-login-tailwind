@@ -9,32 +9,65 @@
 </head>
 <body class="flex items-center justify-center w-screen h-screen bg-gradient-to-br from-zinc-900 to-zinc-800">
 
-    <section class="w-1/2 h-[600px] bg-zinc-950 rounded-3xl flex">
+    <section class="flex w-1/2 pb-10 bg-zinc-950 rounded-3xl">
 
-      <section id="form" class="flex flex-col items-center text-white basis-5/12">
+      <section id="form" class="flex flex-col text-white pl-9 basis-5/12">
         
         <h1 class="my-12 font-sans text-3xl font-bold text-white ">
           
           Faça o seu login
+
+          <span 
+          class="inline-block w-3 h-3 bg-gradient-to-tr from-[#4158D0] via-[#C850C0] via-46% to-[#FFCC70] rounded-full">
+          </span>
         </h1>
 
-        <form action="" class="flex flex-col">
+        <form action="" class="flex flex-col gap-6 text-gray-400">
 
-          <label>
+          <label class="h-16 group">
             email
 
-            <input type="email" />
+            <div 
+            class="transition-opacity ease-in opacity-0 group-focus-within:opacity-100 h-10 w-full bg-gradient-to-tr from-[#4158D0] via-[#C850C0] via-46% to-[#FFCC70] rounded-lg blur-md">
+
+            </div>
+
+            <div class=" relative -top-10  bg-none focus-within:bg-gradient-to-tr from-[#4158D0] via-[#C850C0] via-46% to-[#FFCC70] p-[1px] rounded-lg">
+              
+              <input 
+              type="email" 
+              class="w-full h-10 p-2 rounded-lg outline-none appearance-none bg-zinc-800" />
+
+            </div>
 
           </label>
-          <label>
+          <label class="group">
             senha
 
-            <input type="password"/>
-          </label>
-          <a>esqueci minha senha</a>
+            <div 
+            class="transition-opacity ease-in opacity-0 group-focus-within:opacity-100 h-10 w-full bg-gradient-to-tr from-[#4158D0] via-[#C850C0] via-46% to-[#FFCC70] rounded-lg blur-md">
 
-          <button type="submit">Entrar</button>
-          <a>ainda  não tenho uma conta</a>
+            </div>
+
+            <div 
+            class=" relative -top-10  bg-none focus-within:bg-gradient-to-tr from-[#4158D0] via-[#C850C0] via-46% to-[#FFCC70] p-[1px] rounded-lg">
+              
+              <input 
+              type="password" 
+              class="w-full h-10 p-2 rounded-lg outline-none appearance-none bg-zinc-800" />
+
+            </div>
+            
+          </label>
+          
+          <a class="text-sm text-right underline cursor-pointer">esqueci minha senha</a>
+
+          <button 
+          class="bg-gradient-to-tr from-[#4158D0] via-[#C850C0] via-46% to-[#FFCC70] text-white font-bold h-10 rounded-lg" 
+          type="submit">
+          Entrar
+        </button>
+          <a class="text-sm text-center underline cursor-pointer">ainda  não tenho uma conta</a>
         </form>
         
       </section>
