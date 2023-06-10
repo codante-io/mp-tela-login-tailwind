@@ -787,12 +787,16 @@ video {
   height: 0.75rem;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .h-screen {
   height: 100vh;
 }
 
-.w-1\/2 {
-  width: 50%;
+.w-0 {
+  width: 0px;
 }
 
 .w-3 {
@@ -809,10 +813,6 @@ video {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-0 {
-  width: 0px;
 }
 
 .flex-shrink {
@@ -1675,6 +1675,11 @@ video {
   border-bottom-right-radius: 0.25rem;
 }
 
+.rounded-r-3xl {
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+}
+
 .rounded-s {
   border-start-start-radius: 0.25rem;
   border-end-start-radius: 0.25rem;
@@ -1798,6 +1803,10 @@ video {
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
 
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
 .bg-gradient-to-tr {
   background-image: linear-gradient(to top right, var(--tw-gradient-stops));
 }
@@ -1812,6 +1821,12 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-blue-500 {
+  --tw-gradient-from: #3b82f6 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(59 130 246 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .from-zinc-900 {
   --tw-gradient-from: #18181b var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(24 24 27 / 0) var(--tw-gradient-to-position);
@@ -1823,21 +1838,16 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), #C850C0 var(--tw-gradient-via-position), var(--tw-gradient-to);
 }
 
-.via-\[\#FFCC70\] {
-  --tw-gradient-to: rgb(255 204 112 / 0)  var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), #FFCC70 var(--tw-gradient-via-position), var(--tw-gradient-to);
-}
-
 .to-\[\#FFCC70\] {
   --tw-gradient-to: #FFCC70 var(--tw-gradient-to-position);
 }
 
-.to-zinc-800 {
-  --tw-gradient-to: #27272a var(--tw-gradient-to-position);
+.to-purple-500 {
+  --tw-gradient-to: #a855f7 var(--tw-gradient-to-position);
 }
 
-.to-\[\#C850C0\] {
-  --tw-gradient-to: #C850C0 var(--tw-gradient-to-position);
+.to-zinc-800 {
+  --tw-gradient-to: #27272a var(--tw-gradient-to-position);
 }
 
 .decoration-slice {
@@ -2121,6 +2131,10 @@ video {
 .text-gray-400 {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
+.text-transparent {
+  color: transparent;
 }
 
 .text-white {
