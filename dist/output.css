@@ -779,8 +779,8 @@ video {
   height: 2.5rem;
 }
 
-.h-16 {
-  height: 4rem;
+.h-14 {
+  height: 3.5rem;
 }
 
 .h-3 {
@@ -799,12 +799,20 @@ video {
   width: 0.75rem;
 }
 
+.w-5\/6 {
+  width: 83.333333%;
+}
+
 .w-full {
   width: 100%;
 }
 
 .w-screen {
   width: 100vw;
+}
+
+.w-0 {
+  width: 0px;
 }
 
 .flex-shrink {
@@ -823,8 +831,8 @@ video {
   flex-grow: 1;
 }
 
-.basis-5\/12 {
-  flex-basis: 41.666667%;
+.basis-full {
+  flex-basis: 100%;
 }
 
 .table-auto {
@@ -1327,8 +1335,12 @@ video {
   justify-items: stretch;
 }
 
-.gap-6 {
-  gap: 1.5rem;
+.gap-1 {
+  gap: 0.25rem;
+}
+
+.gap-8 {
+  gap: 2rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -1767,6 +1779,11 @@ video {
   border-style: none;
 }
 
+.bg-\[\#070707\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(7 7 7 / var(--tw-bg-opacity));
+}
+
 .bg-\[rgb\(255\2c 0\2c 0\)\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
@@ -1775,11 +1792,6 @@ video {
 .bg-zinc-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(39 39 42 / var(--tw-bg-opacity));
-}
-
-.bg-zinc-950 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(9 9 11 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-br {
@@ -1811,12 +1823,21 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), #C850C0 var(--tw-gradient-via-position), var(--tw-gradient-to);
 }
 
+.via-\[\#FFCC70\] {
+  --tw-gradient-to: rgb(255 204 112 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #FFCC70 var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
 .to-\[\#FFCC70\] {
   --tw-gradient-to: #FFCC70 var(--tw-gradient-to-position);
 }
 
 .to-zinc-800 {
   --tw-gradient-to: #27272a var(--tw-gradient-to-position);
+}
+
+.to-\[\#C850C0\] {
+  --tw-gradient-to: #C850C0 var(--tw-gradient-to-position);
 }
 
 .decoration-slice {
@@ -1937,12 +1958,13 @@ video {
   padding: 1px;
 }
 
-.pb-10 {
-  padding-bottom: 2.5rem;
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
-.pl-9 {
-  padding-left: 2.25rem;
+.pb-10 {
+  padding-bottom: 2.5rem;
 }
 
 .text-left {
@@ -2507,6 +2529,22 @@ video {
 @media (min-width: 640px) {
   .sm\:underline {
     text-decoration-line: underline;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:w-1\/2 {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:w-7\/12 {
+    width: 58.333333%;
+  }
+
+  .lg\:basis-5\/12 {
+    flex-basis: 41.666667%;
   }
 }
 
