@@ -1,8 +1,8 @@
 export default function Login() {
   return (
-    <div className="bg-login-bg flex w-full md:w-1/2 lg:w-1/4 lg:h-3/6">
+    <div className="bg-login-bg flex lg:w-1/4 lg:flex-row md:w-1/2 sm:flex-col">
 
-      <section>
+      <section className="w-full">
         <h1 className="text-4xl text-gray-200 m-10">
           Faça seu login
           <span className="bg-gradient-to-r from-custom-point-gradient-0 via-custom-point-gradient-1 to-custom-point-gradient-2 text-transparent bg-clip-text">.</span>
@@ -11,11 +11,24 @@ export default function Login() {
           <label htmlFor="email" className="text-gray-400 text-sm">
             Email
           </label>
-            <input type="text" name="" id="email" className="bg-input rounded-md text-gray-400 w-2/2 h-10  mb-5" />
+          <div className="group  h-12">
+            <div className=" transition ease-in opacity-0 group-focus-within:opacity-100 bg-gradient-to-tr from-custom-point-gradient-0 via-custom-point-gradient-1 to-custom-point-gradient-2 h-10 blur-md rounded-lg">
+            </div>
+              <div className="relative -top-[2.5rem] p-1 bg-none focus-within:bg-gradient-to-tr from-custom-point-gradient-0 via-custom-point-gradient-1 to-custom-point-gradient-2 rounded-lg">
+                <input type="text" name="" id="email" className="bg-input rounded-md text-gray-400 h-10 " />
+              </div>
+          </div>
+
           <label htmlFor="password" className="text-gray-400 text-sm">
             Senha
           </label> 
-            <input type="text"  id="password" className="bg-input rounded-md text-gray-400 w-2/2 h-10 mb-5"/>
+          <div className="group h-12">
+            <div className=" transition ease-in opacity-0 group-focus-within:opacity-100 bg-gradient-to-tr from-custom-point-gradient-0 via-custom-point-gradient-1 to-custom-point-gradient-2 h-10 blur-md rounded-lg">
+            </div>
+              <div className="relative -top-[2.5rem] p-1 bg-none focus-within:bg-gradient-to-tr from-custom-point-gradient-0 via-custom-point-gradient-1 to-custom-point-gradient-2 rounded-lg">
+                <input type="text" name="" id="email" className="bg-input rounded-md text-gray-400 h-10 " />
+              </div>
+          </div>
           <p className="text-gray-400 underline flex justify-end text-sm mb-5">Esqueci minha senha</p>
           <button type="button" className="bg-gradient-to-tr from-custom-point-gradient-0 via-custom-point-gradient-1 to-custom-point-gradient-2
           rounded-md
@@ -29,7 +42,7 @@ export default function Login() {
           <p className="text-gray-400 underline flex justify-center text-sm">Ainda não tenho uma conta</p>
         </form>
       </section>
-      <img className="w-1/2 rounded-md w-full" src="/src/assets/image1.png" alt="oi" />
+      <img className=" hidden md:block " src="/src/assets/image1.png" alt="oi" />
     </div>
   )
 }
