@@ -50,7 +50,7 @@ export default function Login() {
           <p className="text-gray-400 underline flex justify-center text-sm">Ainda não tenho uma conta</p>
         </form>
       </section>
-      <img className=" hidden md:block " src="/src/assets/image1.png" alt="oi" />
+      <img className=" hidden md:block " src="/dist/assets/image1.png" alt="oi" />
     </div>
   )
 }
