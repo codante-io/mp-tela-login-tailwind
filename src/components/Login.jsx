@@ -20,8 +20,8 @@ export default function Login() {
           <div className="group  h-12">
             <div className=" transition ease-in opacity-0 group-focus-within:opacity-100 bg-gradient-to-tr from-custom-point-gradient-0 via-custom-point-gradient-1 to-custom-point-gradient-2 h-10 blur-md rounded-lg">
             </div>
-              <div className="relative -top-[2.5rem] p-1 bg-none focus-within:bg-gradient-to-tr from-custom-point-gradient-0 via-custom-point-gradient-1 to-custom-point-gradient-2 rounded-lg">
-                <input type="text" name="email" id="email" required className="bg-input rounded-md text-gray-400 h-10 p-1" />
+              <div className="relative -top-[2.5rem] p-1 bg-none focus-within:bg-gradient-to-tr from-custom-point-gradient-0 via-custom-point-gradient-1 to-custom-point-gradient-2 rounded-lg ">
+                <input type="text" name="email" id="email" required className="bg-input rounded-md text-gray-400 h-10 p-1 " />
               </div>
           </div>
 
